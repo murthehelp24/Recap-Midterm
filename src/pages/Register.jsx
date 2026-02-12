@@ -48,27 +48,47 @@ function Register() {
       toast.error("ลงทะเบียนผิดพลาด")
     }
   }   
-  
+
   console.log("error", error)
   return (
     <div className='flex justify-center items-center h-screen bg-gray-200'>
       <form onSubmit={hdlSubmit} className='flex flex-col w-full max-w-md p-6 bg-gray-300 rounded-xl shadow-2xl border border-gray-400'>
         <h2 className='text-center text-2xl text-gray-800'>Create Account</h2>
-        <label></label>username :
-        <input name='username' type="text" placeholder='username' value={formData.username} onChange={hdlChange} className={inpStyle} />
+        <label>username :</label>
+        <input name='username' 
+        type="text" placeholder='username' 
+        value={formData.username} 
+        onChange={hdlChange} 
+        className={inpStyle} />
         {error?.username && <p className='text-red-500'>{error?.username[0]}</p>}
 
-        <label></label>password :
-        <input name='password' type="password" placeholder='password' onChange={hdlChange} className={inpStyle} />
+        <label>password :</label>
+        <input name='password' 
+        type="password" 
+        placeholder='password' 
+        value={formData.username} 
+        onChange={hdlChange} 
+        className={inpStyle} />
         {error?.password && <p className='text-red-500'>{error?.password[0]}</p>}
 
-        <label></label>email :
-        <input name='email' type="text" placeholder='e-mail@gmail.com' onChange={hdlChange} className={inpStyle} />
+        <label>email :</label>
+        <input name='email' 
+        type="text" 
+        placeholder='e-mail@gmail.com'
+        value={formData.username} 
+        onChange={hdlChange} 
+        className={inpStyle} />
         {error?.email && <p className='text-red-500'>{error?.email[0]}</p>}
 
-        <label></label>phone :
-        <input name='phone' type="text" placeholder='088-xxxxxxx' onChange={hdlChange} className={inpStyle} />
+        <label>phone :</label>
+        <input name='phone' 
+        type="text" 
+        placeholder='088-xxxxxxx' 
+        value={formData.username} 
+        onChange={hdlChange} 
+        className={inpStyle} />
         {error?.phone && <p className='text-red-500'>{error?.phone[0]}</p>}
+
         <button className='my-4 p-1 text-white bg-gray-600 rounded-2xl hover:bg-gray-700'>Register</button>
       </form>
     </div>
